@@ -16,7 +16,11 @@
     {# ------ The Form ------ #}
   <div class="container col-md-8 col-md-offset-2" id="theform">
 
-        <h2 class="form-signin-heading">Upload from your Browser</h2>
+    <h3 class="form-signin-heading">Upload from your Browser</h3>
+      <span>
+        Please name your file properly, as <code>{video start timed}_{camera_id}_{mall_id}</code>. for instance: <code>2017-10-06 13:21:00_19_central</code>
+      <span>
+
       <form class="dropzone" id="my-dropzone" role="form" action="https://{{ bucket_name }}.s3.amazonaws.com/" method="POST" enctype="multipart/form-data">
 
         {# AWS S3 Signed Policy Details #}
@@ -34,7 +38,7 @@
   </div> 
 
   <div class="container col-md-8 col-md-offset-2" id="theCodeUploadExplain">
-    <h2>Upload via curl</h2>
+    <h3>Upload via curl</h3>
     <span>
       Alternatively, you can HTTPS POST using a tool like curl, via the following syntax. Replace <code>file.name</code> with the file you wish to upload
     <span>
